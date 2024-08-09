@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - FurniturQyu Home</title>
+    <link rel="stylesheet" href="css/register.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('form').submit(function(e) {
+                e.preventDefault(); // Menghentikan perilaku default form submission
+                
+                $.ajax({
+                    type: 'POST',
+                    url: 'php/process_register.php',
+                    data: $('form').serialize(),
+                    dataType: 'json',
+                    success: function(response) {
+                        // Tampilkan notifikasi berhasil
+                        $('.notification').html('<div class="success">Registrasi berhasil!</div>');
+                    },
+                    error: function(response) {
+                        // Tampilkan notifikasi gagal
+                        $('.notification').html('<div class="error">Registrasi gagal: ' + response.message + '</div>');
+                    }
+                });
+            });
+        });
+        </script>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <img src="Images/logo.png" alt="FurniturQyu Home Logo" class="logo">
+            <h2>Register</h2>
+            <p>Enter your username and password</p>
+            <form action="php/process_register.php" method="post">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <div class="notification"></div> <!-- Container untuk notifikasi -->
+            <p>Already have an account? <a href="Login.html">Log in</a></p>
+            <a href="privacy.html" class="privacy-link">Privacy</a>
+        </div>
+    </div>
+</body>
+</html>

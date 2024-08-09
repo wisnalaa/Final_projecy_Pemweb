@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #E4C59E;
+    padding: 10px;
+}
+
+.logo {
+    float: left;
+}
+
+.user-links {
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.user-links a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.search-bar {
+    text-align: center;
+    position: flex;
+}
+
+.search-bar input[type="text"] {
+    width: 600px; /* Lebar input searchbar */
+    padding: 10px; /* Padding di dalam input */
+    border: 2px solid #E4C59E; /* Menambahkan border dengan warna #E4C59E */
+    border-radius: 10px; /* Untuk membuat sudut input menjadi melengkung */
+    outline: none; /* Menghilangkan outline saat input aktif */
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    padding-top: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding: 0px;
+}
+
+.col1{
+    text-align: center;
+    padding: 20px;
+    background-color: #E4C59E;
+    opacity: 100%;
+}
+
+.col1 a{
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.col1 a:hover{
+    background-color: #f0f0f0;
+}
+
+.hand{
+    padding-left: 2%;
+}
+
+.hand a{
+    text-decoration: none;
+    color: chocolate;
+}
+
+.nose{
+    padding-left: 40%;
+    font-size: 50px;
+}
+
+.befo{
+    margin-top: 50px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.befo h2{
+    text-align: center;
+    font-weight: normal;
+}
+
+.befo-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.befo-card{
+    width: 325px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    margin: 20px;
+}
+
+.befo-img img{
+    width: 320px;
+    height: auto;
+}
+.befo-img a{
+    height: 35px;
+    width: 35px;
+    color: #fff;
+    background: #803d3b;
+    margin: 15px 270px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    display: flex;
+    padding-left: 7px;
+    padding-top:  7px;
+    font-size: 20px;
+}
+
+.befo-content{
+    padding: 16px;
+    color: #803d3b;
+}
+
+.befo-content h3{
+    font-size: 28px;
+    margin-bottom: 1px;
+    justify-content: center;
+    display: flex;
+}
+
+.befo-content p{
+    color: #666;
+    font-size: 15px;
+    line-height: 1.3;
+    justify-content: center;
+    display: flex;
+}
+
+.befo-add{
+    text-align: center;
+    margin: 10px 10px;
+}
+
+.befo-add a{
+    background-color: #803d3b;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.befo-add .add{
+    padding: 4px;
+    background-color: #803D3B;
+    color: white;
+    font-weight: 500;
+    padding-inline: 20px;
+    cursor: pointer;
+}
+
+.bef{
+    display: flex;
+    background-color: #E4C59E;
+    color: #fff;
+    text-align: left;
+    padding: 40px;
+}
+
+.bef button{
+    margin-left: 400px;
+    border: 2px solid #fff;
+}
+
+.bef button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer {
+    background-color: #FFF8EF;
+    color: #333;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left p{
+    color: #9B9B9B;
+}
+
+.footer-logo img {
+    width: 170px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-center,
+.footer-right {
+    flex: 1;
+}
+
+.useful-links,
+.idea-advice,
+.payment-methods {
+    align-self: flex-start;
+    margin-top: 90px;
+    margin-left: 50px;
+}
+
+.useful-links,
+.idea-advice{
+    display: inline-block;
+    margin-right: 30px;
+
+}
+
+.useful-links a,
+.idea-advice a {
+    margin-top: 20px;
+    color: #9B9B9B;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.payment-methods {
+    margin-top: 90px;
+}
+
+.payment-methods img {
+    width: 200px;
+    margin-right: 10px;
+}

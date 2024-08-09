@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif, 'Inter';
+    outline: none; border: none;
+    text-decoration: none;
+}
+
+/* CSS for header */
+:root{
+    --box-shadow:0 .5px 10px rgb(0,0,0,0.1);
+}
+
+html{
+    font-size: 70%; /* Ukuran font dasar jadi 70% dari default */
+    overflow-x: hidden; /* Sembunyikan overflow horizontal */
+    scroll-padding-top: 5px; /* Beri padding atas saat scrolling */
+    scroll-behavior: smooth; /* Scroll halus */
+}
+
+html::-webkit-scrollbar{
+    width: 12px;
+}
+
+/* Kustomisasi track scrollbar (area di mana scrollbar bergerak) */
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+/* Kustomisasi handle scrollbar (elemen yang bisa digerakkan) */   
+html::-webkit-scrollbar-thumb{
+    background: #bdbdbd;
+}
+
+html::-webkit-scrollbar-thumb:hover{
+    background: #939393
+}
+
+.header .header-1{
+    background: #fff;
+    padding: 10px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-1 .logo{
+    float: left;
+}
+
+.header .header-1 .search-form{
+    width: 700px;
+    height: 3rem;
+    border: 1px solid #803D3B;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.header .header-1 .search-form input{
+    font-size: 13px;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.header .header-1 .search-form label{
+    font-size: 15px;
+    padding-right: 10px;
+    color: #9d9d9d;
+}
+
+.header .header-1 .search-form label:hover{
+    color: #803D3B;
+}
+
+.header .header-1 .icons div,
+.header .header-1 .icons a{
+    font-size: 20px;
+    margin-left: 1.5rem;
+    color: #584130;
+    cursor: pointer;
+}
+
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover{
+    color: #AF8260;
+}
+
+#search-btn{
+    display: none;
+}
+
+.header .header-2{
+    background: #E4C59E;
+}
+
+.header .header-2 .navbar{
+    text-align: center;
+}
+
+.header .header-2 .navbar a{
+    color: #803D3B;
+    display: inline-block;
+    margin: 0 15px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.header .header-2 .navbar a:hover{
+    background: #AF8260;
+    color: #fff;
+}
+
+.header .header-2.active{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.bottom-navbar{
+    text-align: center;
+    background: #E4C59E;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    /* bottom navbar tetap muncul di atas konten lainya saat di-scroll. */
+    z-index: 1000;                
+    display: none;
+}
+
+.bottom-navbar a{
+    font-size: 20px;
+    padding: 15px 35px;
+    color: #803D3B;
+}
+
+.bottom-navbar a:hover{
+    background: #AF8260;
+    color: #fff;
+}
+
+/* CSS for contact */
+.contact{
+    position: relative;
+    /* min-height: 100vh; */
+    padding: 30px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+}
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #E4C59E;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #333;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #AF8260;
+    font-size: 16px;
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+}
+
+.contactForm h2{
+    font-size: 22px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #803D3B;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 14px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #939393;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #803d3b;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+@media (max-width: 991px){
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contactInfo{
+        margin-bottom: 40px;
+    }
+    .container .contactInfo,
+    .contactForm{
+        width: 100%;
+    }
+}
+
+.footer {
+    background-color: #FFF8EF;
+    color: #333;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left p{
+    color: #9B9B9B;
+}
+
+.footer-logo img {
+    width: 170px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-center,
+.footer-right {
+    flex: 1;
+}
+
+.useful-links,
+.idea-advice,
+.payment-methods {
+    align-self: flex-start;
+    margin-top: 90px;
+    margin-left: 50px;
+}
+
+.useful-links,
+.idea-advice{
+    display: inline-block;
+    margin-right: 30px;
+
+}
+
+.useful-links a,
+.idea-advice a {
+    margin-top: 20px;
+    color: #9B9B9B;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.payment-methods {
+    margin-top: 90px;
+}
+
+.payment-methods img {
+    width: 200px;
+    margin-right: 10px;
+}
+
+/* Media  */
+
+/* layar hp tpi agak lebar */
+@media (max-width:477px){
+    .section-p1{
+        padding: 20px;
+    }
+    #header {
+        padding: 10px 30px;
+    }
+
+    /* header */
+    html{
+        font-size: 55%;
+    }
+
+    .header .header-1{
+        padding: 2rem;
+    }
+}
+
+/* untuk tab */
+@media (max-width:768px){
+
+    html{
+        scroll-padding-top: 0;
+    }
+
+    body{
+        padding-bottom: 6rem;
+    }
+    .header .header-2{
+        display: none;
+    }
+
+    .bottom-navbar{
+        display: block;
+    }
+
+    .header .header-1{
+        box-shadow: var(--box-shadow);
+        position: relative;
+    }
+
+    .header .header-1 .search-form{
+        position: absolute;
+        top: -115%; right: 16px;
+        width: 90%;
+        box-shadow: var(--box-shadow);
+    }
+
+    .header .header-1 .search-form.active{
+        top: 115%;
+    }
+
+    #search-btn{
+        display: inline-block;
+    }
+}
+
+/* buat layar hp */
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}

@@ -1,0 +1,505 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif, inter;
+    outline: none; border: none;
+    text-decoration: none;
+}
+
+/* css for header */
+
+/* body{
+    height: 300rem;
+} */
+
+:root{
+    --box-shadow:0 .5rem 1rem rgb(0,0,0,0.1);
+}
+
+html{
+    font-size: 70%;
+    overflow-x: hidden;
+    scroll-padding-top: 5px;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width:1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #333;
+}
+
+.header .header-1{
+    background: #fff;
+    padding: 10px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-1 .logo{
+    float: left;
+}
+
+.header .header-1 .search-form{
+    width: 50rem;
+    height: 3rem;
+    border: 1px solid #803D3B;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.header .header-1 .search-form input{
+    font-size: 13px;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.header .header-1 .search-form label{
+    font-size: 15px;
+    padding-right: 1.5rem;
+    color: #333;
+}
+
+.header .header-1 .search-form label:hover{
+    color: #803D3B;
+}
+
+.header .header-1 .icons div,
+.header .header-1 .icons a{
+    font-size: 20px;
+    margin-left: 1.5rem;
+    color: #584130;
+    cursor: pointer;
+}
+
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover{
+    color: #AF8260;
+}
+
+#search-btn{
+    display: none;
+}
+
+.header .header-2{
+    background: #E4C59E;
+}
+
+.header .header-2 .navbar{
+    text-align: center;
+}
+
+.header .header-2 .navbar a{
+    color: #803D3B;
+    display: inline-block;
+    margin: 0 15px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.header .header-2 .navbar a:hover{
+    background: #AF8260;
+    color: #fff;
+}
+
+.header .header-2.active{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.bottom-navbar{
+    text-align: center;
+    background: #E4C59E;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: none;
+}
+
+.bottom-navbar a{
+    font-size: 20px;
+    padding: 15px 35px;
+    color: #803D3B;
+}
+
+.bottom-navbar a:hover{
+    background: #AF8260;
+    color: #fff;
+}
+
+
+
+
+/* CSS for Cart */
+
+#cart {
+    overflow-x: auto;
+}
+
+#cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart table img{
+    width: 100px;
+}
+
+#cart table td:nth-child(1){
+    width: 100px;
+    text-align: center;
+}
+#cart table td:nth-child(2){
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(3){
+    width: 250px;
+    text-align: center;
+}
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(5) input{
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+    text-align: center;
+}
+
+#cart table thead{
+    border: 1px solid #e2e9e1; 
+    border-left: none;
+    border-right: none;
+}
+
+#cart table td i{
+    color: red;
+}
+
+
+.circle-button {
+    width: 20px; /* Sesuaikan ukuran tombol sesuai kebutuhan */
+    height: 20px; /* Sesuaikan ukuran tombol sesuai kebutuhan */
+    border-radius: 50%; /* Membuat tombol berbentuk lingkaran */
+    background-color: white; /* Warna latar belakang putih */
+    border: 2px solid red;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .button-text {
+    font-size: 13px; /* Sesuaikan ukuran huruf sesuai kebutuhan */
+    font-weight: bold;
+    color: red; /* Warna huruf merah */
+    position: absolute;
+  }
+
+  .btn-update {
+    background-color: #803D3B; /* Warna latar belakang */
+    color: #fff; /* Warna teks */
+    padding: 5px 10px; /* Padding untuk ruang di dalam tombol */
+    border: none; /* Menghapus border default */
+    border-radius: 5px; /* Membulatkan sudut tombol */
+    cursor: pointer; /* Mengubah kursor saat hover */
+    font-size: 14px; /* Ukuran font */
+    transition: background-color 0.3s ease; /* Transisi untuk efek hover */
+    }
+  
+
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+
+#cart table tbody tr td {
+    padding-top: 15px;
+}
+
+#cart table tbody td {
+    font-size: 13px;
+}
+
+#cart-add {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+
+}
+
+
+#subtotal {
+    position: flex;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid  #e2e9e1;
+    padding: 30px;
+}
+
+#subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;   
+}
+
+#subtotal table td{
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
+}
+
+#subtotal button{
+    background-color: #803D3B;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Ensure the #cart-add section uses flexbox for alignment */
+#cart-add {
+    display: flex;
+    justify-content: flex-end; /* Center the content horizontally */
+    align-items: flex-start; /* Center the content vertically */
+    width: 100%; /* Make it full width */
+    padding: 20px 0; /* Add some padding for spacing */
+    margin-top: 20px;
+}
+
+#subtotal {
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    width: 100%; /* Make it full width */
+    max-width: 600px; /* Set a max-width for better readability */
+    margin: 0 auto; /* Center the content */
+    background-color: #f9f9f9; /* Add a background color */
+    padding: 20px; /* Add some padding for spacing */
+    border: 1px solid #ddd; /* Add a border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+#subtotal h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add some margin below the heading */
+}
+
+#subtotal table {
+    width: 100%; /* Make the table full width */
+    border-collapse: collapse; /* Remove space between table cells */
+}
+
+#subtotal table td {
+    padding: 10px; /* Add padding to table cells */
+    border-top: 1px solid #ddd; /* Add a border to table rows */
+}
+
+#subtotal table tr:first-child td {
+    border-top: none; /* Remove the top border for the first row */
+}
+
+#subtotal table tr td:nth-child(1) {
+    text-align: left; /* Align the first column to the left */
+}
+
+#subtotal table tr td:nth-child(2) {
+    text-align: right; /* Align the second column to the right */
+}
+
+#subtotal button.normal {
+    display: block; /* Make the button block level */
+    
+    padding: 10px 0; /* Add padding */
+    margin-top: 20px; /* Add margin on top */
+    background-color: #803D3B; /* Button background color */
+    color: #fff; /* Button text color */
+    text-align: center; /* Center the button text */
+    border: none; /* Remove the border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* #subtotal button.normal:hover {
+    background-color: #331e1e; 
+} */
+
+
+
+/* CSS for Footer */
+.footer {
+    background-color: #FFF8EF;
+    color: #333;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left p{
+    color: #803D3B;
+    margin-left: 50px;
+}
+
+.footer-logo img {
+    width: 170px;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.footer-center,
+.footer-right {
+    flex: 1;
+}
+
+.useful-links,
+.idea-advice,
+.payment-methods {
+    align-self: flex-start;
+    margin-top: 90px;
+    margin-left: 50px;
+}
+
+.useful-links,
+.idea-advice,
+.payment-methods h4{
+    font-size: 13px;
+}
+
+.useful-links,
+.idea-advice{
+    display: inline-block;
+    margin-right: 30px;
+
+}
+
+.useful-links a,
+.idea-advice a {
+    margin-top: 20px;
+    color: #803D3B;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.payment-methods {
+    margin-top: 90px;
+}
+
+.payment-methods img {
+    width: 200px;
+    margin-right: 10px;
+}
+
+
+
+
+/* media */
+@media (max-width:477px){
+    .section-p1{
+        padding: 20px;
+    }
+    #header {
+        padding: 10px 30px;
+    }
+
+    /* Cart Page */
+    #subtotal {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* header */
+    html{
+        font-size: 55%;
+    }
+
+    .header .header-1{
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    html{
+        scroll-padding-top: 0;
+    }
+
+    body{
+        padding-bottom: 6rem;
+    }
+    .header .header-2{
+        display: none;
+    }
+
+    .bottom-navbar{
+        display: block;
+    }
+
+    .header .header-1{
+        box-shadow: var(--box-shadow);
+        position: relative;
+    }
+
+    .header .header-1 .search-form{
+        position: absolute;
+        top: -115%; right: 2rem;
+        width: 90%;
+        box-shadow: var(--box-shadow);
+    }
+
+    .header .header-1 .search-form.active{
+        top: 115%;
+    }
+
+    #search-btn{
+        display: inline-block;
+    }
+
+    /* cart */
+    #subtotal {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+}
+

@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif, 'Inter';
+    outline: none; border: none;
+    text-decoration: none;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+/* CSS for header */
+:root{
+    --box-shadow:0 .5px 10px rgb(0,0,0,0.1);
+}
+
+html{
+    font-size: 70%; /* Ukuran font dasar jadi 70% dari default */
+    overflow-x: hidden; /* Sembunyikan overflow horizontal */
+    scroll-padding-top: 5px; /* Beri padding atas saat scrolling */
+    scroll-behavior: smooth; /* Scroll halus */
+}
+
+html::-webkit-scrollbar{
+    width: 12px;
+}
+
+/* Kustomisasi track scrollbar (area di mana scrollbar bergerak) */
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+/* Kustomisasi handle scrollbar (elemen yang bisa digerakkan) */   
+html::-webkit-scrollbar-thumb{
+    background: #bdbdbd;
+}
+
+html::-webkit-scrollbar-thumb:hover{
+    background: #939393
+}
+
+.header .header-1{
+    background: #fff;
+    padding: 10px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-1 .logo{
+    float: left;
+}
+
+.header .header-1 .search-form{
+    width: 700px;
+    height: 3rem;
+    border: 1px solid #803D3B;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.header .header-1 .search-form input{
+    font-size: 13px;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.header .header-1 .search-form label{
+    font-size: 15px;
+    padding-right: 10px;
+    color: #9d9d9d;
+}
+
+.header .header-1 .search-form label:hover{
+    color: #803D3B;
+}
+
+.header .header-1 .icons div,
+.header .header-1 .icons a{
+    font-size: 20px;
+    margin-left: 1.5rem;
+    color: #584130;
+    cursor: pointer;
+}
+
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover{
+    color: #AF8260;
+}
+
+#search-btn{
+    display: none;
+}
+
+.header .header-2{
+    background: #E4C59E;
+}
+
+.header .header-2 .navbar{
+    text-align: center;
+}
+
+.header .header-2 .navbar a{
+    color: #803D3B;
+    display: inline-block;
+    margin: 0 15px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.header .header-2 .navbar a:hover{
+    background: #AF8260;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.header .header-2.active{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.bottom-navbar{
+    text-align: center;
+    background: #E4C59E;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    /* bottom navbar tetap muncul di atas konten lainya saat di-scroll. */
+    z-index: 1000;                
+    display: none;
+}
+
+.bottom-navbar a{
+    font-size: 20px;
+    padding: 15px 35px;
+    color: #803D3B;
+}
+
+.bottom-navbar a:hover{
+    background: #AF8260;
+    color: #fff;
+    transition: 0.5s;
+}
+
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings {
+    display: flex;
+}
+
+.menu {
+    flex: 1;
+    border-right: 1px solid #ddd;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    margin: 20px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 10px 20px;
+}
+
+.menu a.active {
+    font-weight: bold;
+}
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.form {
+    flex: 3;
+    padding-left: 20px;
+}
+
+.form h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ffeeba;
+}
+
+.warning p {
+    margin-bottom: 5px;
+}
+
+.warning a {
+    color: #856404;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttons .save {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.buttons .cancel {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+/* CSS for footer */
+.footer {
+    background-color: #FFF8EF;
+    color: #333;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left p{
+    color: #9B9B9B;
+}
+
+.footer-logo img {
+    width: 170px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-center,
+.footer-right {
+    flex: 1;
+}
+
+.useful-links,
+.idea-advice,
+.payment-methods {
+    align-self: flex-start;
+    margin-top: 90px;
+    margin-left: 50px;
+}
+
+.useful-links,
+.idea-advice{
+    display: inline-block;
+    margin-right: 30px;
+
+}
+
+.useful-links a,
+.idea-advice a {
+    margin-top: 20px;
+    color: #9B9B9B;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.payment-methods {
+    margin-top: 90px;
+}
+
+.payment-methods img {
+    width: 200px;
+    margin-right: 10px;
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width:477px){
+    .section-p1{
+        padding: 20px;
+    }
+    #header {
+        padding: 10px 30px;
+    }
+
+    /* header */
+    html{
+        font-size: 55%;
+    }
+
+    .header .header-1{
+        padding: 2rem;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    /* header */
+    html{
+        scroll-padding-top: 0;
+    }
+
+    body{
+        padding-bottom: 6rem;
+    }
+    .header .header-2{
+        display: none;
+    }
+
+    .bottom-navbar{
+        display: block;
+    }
+
+    .header .header-1{
+        box-shadow: var(--box-shadow);
+        position: relative;
+    }
+
+    .header .header-1 .search-form{
+        position: absolute;
+        top: -115%; right: 16px;
+        width: 90%;
+        box-shadow: var(--box-shadow);
+    }
+
+    .header .header-1 .search-form.active{
+        top: 115%;
+    }
+
+    #search-btn{
+        display: inline-block;
+    }
+   
+    /* footer */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-links a {
+        margin-left: 10px;
+    }
+
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .paragraph {
+        padding: 20px;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+}

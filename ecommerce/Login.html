@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - FurniturQyu Home</title>
+    <link rel="stylesheet" href="css/Login2.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="Login2-container">
+        <div class="Login2-box">
+            <img src="Images/logo.png" alt="FurniturQyu Home Logo" class="logo">
+            <h2>Log in</h2>
+            <p>Enter your username and password</p>
+            
+            <form id="loginForm" action="php/Login.php" method="post">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Sign up</a></p>
+            <a href="privacy.html" class="privacy-link">Privacy</a>
+        </div>
+    </div>
+
+    <div id="notification" style="display:none;" class="alert alert-success"></div>
+    <script>
+        $(document).ready(function(){
+            $("#loginForm").on('submit', function(e){
+                e.preventDefault();
+                console.log("Form submitted");
+                $.ajax({
+                    url: 'php/process_login.php',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    dataType: 'json',
+                    success: function(response){
+                        console.log(response);
+                        if (response.status) {
+                            $("#notification").fadeIn().html(response.message).delay(3000).fadeOut();
+                            window.location.href = "Account.html";
+                        } else {
+                            $("#notification").fadeIn().html(response.message).delay(3000).fadeOut();
+                        }
+                    },
+                    error: function(xhr, status, error){
+                        console.error(xhr.responseText);
+                        alert("Gagal melakukan login.");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

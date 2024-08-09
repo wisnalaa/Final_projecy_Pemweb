@@ -1,0 +1,396 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif, inter;
+    outline: none; border: none;
+    text-decoration: none;
+}
+
+/* css for header */
+
+:root{
+    --box-shadow:0 .5px 10px rgb(0,0,0,0.1);
+}
+
+html{
+    font-size: 70%; /* Ukuran font dasar jadi 70% dari default */
+    overflow-x: hidden; /* Sembunyikan overflow horizontal */
+    scroll-padding-top: 5px; /* Beri padding atas saat scrolling */
+    scroll-behavior: smooth; /* Scroll halus */
+}
+
+html::-webkit-scrollbar{
+    width: 12px;
+}
+
+/* Kustomisasi track scrollbar (area di mana scrollbar bergerak) */
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+/* Kustomisasi handle scrollbar (elemen yang bisa digerakkan) */   
+html::-webkit-scrollbar-thumb{
+    background: #bdbdbd;
+}
+
+html::-webkit-scrollbar-thumb:hover{
+    background: #939393
+}
+
+.header .header-1{
+    background: #fff;
+    padding: 10px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-1 .logo{
+    float: left;
+}
+
+.header .header-1 .search-form{
+    width: 700px;
+    height: 3rem;
+    border: 1px solid #803D3B;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.header .header-1 .search-form input{
+    font-size: 13px;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.header .header-1 .search-form label{
+    font-size: 15px;
+    padding-right: 10px;
+    color: #9d9d9d;
+}
+
+.header .header-1 .search-form label:hover{
+    color: #803D3B;
+}
+
+.header .header-1 .icons div,
+.header .header-1 .icons a{
+    font-size: 20px;
+    margin-left: 1.5rem;
+    color: #584130;
+    cursor: pointer;
+}
+
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover{
+    color: #AF8260;
+}
+
+#search-btn{
+    display: none;
+}
+
+.header .header-2{
+    background: #E4C59E;
+}
+
+.header .header-2 .navbar{
+    text-align: center;
+}
+
+.header .header-2 .navbar a{
+    color: #803D3B;
+    display: inline-block;
+    margin: 0 15px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.header .header-2 .navbar a:hover{
+    background: #AF8260;
+    color: #fff;
+}
+
+.header .header-2.active{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.bottom-navbar{
+    text-align: center;
+    background: #E4C59E;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    /* bottom navbar tetap muncul di atas konten lainya saat di-scroll. */
+    z-index: 1000;                
+    display: none;
+}
+
+.bottom-navbar a{
+    font-size: 20px;
+    padding: 15px 35px;
+    color: #803D3B;
+}
+
+.bottom-navbar a:hover{
+    background: #AF8260;
+    color: #fff;
+}
+
+
+
+/* CSS for content */
+.btn{
+    margin-top: 10px;
+    display: inline-block;
+    background: #803D3B;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 10px 20px ;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.product .row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.product .row .image{
+    flex: 0 50px;
+    padding: 20px 10rem;
+}
+
+.product .row .image img{
+    width: 450px;
+}
+
+.product .row .content{
+    flex: 10 30px;
+    padding: 10px;
+}
+
+.product .row .content span{
+    font-size: 16px;
+    color: #939393;
+}
+
+.product .row .content h3{
+    font-size: 28px;
+    padding-top: 20px;
+    color: #803D3B;
+}
+
+.product .row .content p{
+    font-size: 14px;
+    padding: 10px 0;
+    font-weight: 350;
+}
+
+/* Material */
+.material{
+    padding: 20px;
+}
+
+.material .heading{
+    text-align: center;
+    font-size: 26px;
+    padding: 20px;
+    font-weight: 400;
+    color: #803D3B;
+}
+
+.material .box-container{
+    display: flex;
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, minmax(50px 1fr));
+    gap: 20px;
+    margin: 20px 0;
+    transition: transform 0.3s ;
+
+}
+
+.material .box-container .box{
+     /* padding-left: 20px; */
+    padding: 20px 10px; 
+    text-align: center;
+    border: 1px solid #803D3B;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.material .box-container .box img{
+    /* max-width: 100%; */
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.material .box-container .box h3{
+    margin: 10px 0;
+    font-size: 16px;
+    color: #584130;
+}
+
+.material .box-container .box p{
+    font-size: 14px;
+}
+
+
+/* CSS for Footer */
+.footer {
+    background-color: #FFF8EF;
+    color: #333;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left p{
+    color: #803D3B;
+    margin-left: 50px;
+}
+
+.footer-logo img {
+    width: 170px;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.footer-center,
+.footer-right {
+    flex: 1;
+}
+
+.useful-links,
+.idea-advice,
+.payment-methods {
+    align-self: flex-start;
+    margin-top: 90px;
+    margin-left: 50px;
+}
+
+.useful-links,
+.idea-advice,
+.payment-methods h4{
+    font-size: 13px;
+}
+
+.useful-links,
+.idea-advice{
+    display: inline-block;
+    margin-right: 30px;
+
+}
+
+.useful-links a,
+.idea-advice a {
+    margin-top: 20px;
+    color: #803D3B;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.payment-methods {
+    margin-top: 90px;
+}
+
+.payment-methods img {
+    width: 200px;
+    margin-right: 10px;
+}
+
+
+
+/* media */
+
+/* layar hp tpi agak lebar */
+@media (max-width:477px){
+    .section-p1{
+        padding: 20px;
+    }
+    #header {
+        padding: 10px 30px;
+    }
+
+    /* header */
+    html{
+        font-size: 55%;
+    }
+
+    .header .header-1{
+        padding: 2rem;
+    }
+
+}
+
+/* untuk tab */
+@media (max-width:768px){
+
+    html{
+        scroll-padding-top: 0;
+    }
+
+    body{
+        padding-bottom: 6rem;
+    }
+    .header .header-2{
+        display: none;
+    }
+
+    .bottom-navbar{
+        display: block;
+    }
+
+    .header .header-1{
+        box-shadow: var(--box-shadow);
+        position: relative;
+    }
+
+    .header .header-1 .search-form{
+        position: absolute;
+        top: -115%; right: 16px;
+        width: 90%;
+        box-shadow: var(--box-shadow);
+    }
+
+    .header .header-1 .search-form.active{
+        top: 115%;
+    }
+
+    #search-btn{
+        display: inline-block;
+    }
+
+}
+
+/* buat layar hp */
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+}
